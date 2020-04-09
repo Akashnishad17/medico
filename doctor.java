@@ -144,8 +144,9 @@ class docinfo extends doctorCredentials
 			{
 				bw.write(s);
 			}
-			bw.newLine();
 			s=br.readLine(); 
+			if(s != null)
+				bw.newLine();
 		}
 		bw.flush();
 		br.close();
@@ -317,8 +318,9 @@ class docappointment
 			{
 				bw.write(s);
 			}
-			bw.newLine();
 			s=br.readLine(); 
+			if(s != null)
+				bw.newLine();
 		}
 		bw.flush();
 		br.close();

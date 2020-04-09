@@ -58,14 +58,20 @@ class info extends patientCredentials
 	{
 		FileReader fr = new FileReader("patientinfo.txt");
 		BufferedReader br = new BufferedReader(fr);
-		int lc=0;
-		while(br.readLine()!= null)
+		String lastId = "";
+		String s = br.readLine();
+		while(s != null)
 		{
-			lc++;
+			String[] data = s.split("\t");
+			lastId = data[0];
+			s = br.readLine();
 		}
 		br.close();
 		fr.close();
-		userID = "P"+ Integer.toString(lc+1);
+		if(lastId == "")
+			userID = "P1";
+		else
+			userID = "P"+ Integer.toString(1+Integer.parseInt(lastId.substring(1,lastId.length())));
 
 		FileWriter fw = new FileWriter("patientinfo.txt",true);
 		BufferedWriter bw = new BufferedWriter(fw);
@@ -257,8 +263,9 @@ class info extends patientCredentials
 			{
 				bw.write(s);
 			}
-			bw.newLine();
-			s=br.readLine(); 
+			s=br.readLine();
+			if(s != null)
+				bw.newLine();
 		}
 		bw.flush();
 		br.close();
@@ -567,8 +574,9 @@ class appointment
 			{
 				bw.write(s);
 			}
-			bw.newLine();
-			s=br.readLine(); 
+			s=br.readLine();
+			if(s != null)
+				bw.newLine();
 		}
 		bw.flush();
 		br.close();

@@ -3,3 +3,5 @@ P2	Akshat	Kumar	M	GZB	DL	A-	Malaria	20	23456
 P4	Harshit	Gupta	M	YMN	HRY	AB+	Malaria	20	56789
 P5	Arjun	Sharma	M	DDN	UK	AB-	Sugar	21	46382
 P6	Akash	Nishad	M	DDN	UK	A+	Headache	19	32424
+P7	Narendra	Modi	M	Gujarat	Gujarat	O+	Corona	70	1234567890
+P8	Doland	Trump	M	California	US	A+	Piles	78	1234567890
